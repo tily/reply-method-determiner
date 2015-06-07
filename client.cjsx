@@ -11,7 +11,7 @@ Glyphicon = require('react-bootstrap').Glyphicon
 
 App = React.createClass
   methods: [
-    '@ Replies'
+    'Replies with @'
     'Replies without @ (not including username)'
     'Replies without @ (including username)'
     'Direct Messages'
