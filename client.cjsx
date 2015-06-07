@@ -12,10 +12,10 @@ Glyphicon = require('react-bootstrap').Glyphicon
 App = React.createClass
   methods: [
     'Replies with @'
-    'Replies without @ (not including username)'
-    'Replies without @ (including username)'
+    'Replies without @\n(not including username)'
+    'Replies without @\n(including username)'
     'Direct Messages'
-    'E-Mail (mailto: tidnlyam@gmail.com)'
+    'E-Mail\n(tidnlyam@gmail.com)'
   ]
 
   getInitialState: ()->
@@ -28,7 +28,7 @@ App = React.createClass
     <div className='container text-center' style={fontSize:'10.0vh'}>
       <h1>Reply Method Determiner</h1>
       <Button onClick={@handleClick}>Determine</Button><br />
-      <span>{@state.method}</span>
+      <span dangerouslySetInnerHTML={ __html: @state.method.replace /\n/g, ()-> "<br />"} />
     </div>
 
 $(document).ready ()->
