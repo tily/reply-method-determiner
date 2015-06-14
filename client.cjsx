@@ -16,6 +16,7 @@ App = React.createClass
     'Reply without @\n(including username)'
     'Direct Message'
     'Unofficial Retweet'
+    'Reply in Mind'
   ]
 
   getInitialState: ()->
